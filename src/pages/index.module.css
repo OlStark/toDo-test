@@ -1,0 +1,73 @@
+.login_form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+
+    input {
+        background-color: transparent;
+        height: 2rem;
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: 0rem 0.3rem;
+    }
+
+    input:hover {
+        background-color: rgba(49, 49, 49, 0.5);
+        transition: all 0.5s;
+    }
+    
+    input:focus {
+        background-color: rgb(49, 49, 49);
+        border-color: transparent;
+    }
+
+    button {
+        background-color: var(--main-blue);
+        height: 2rem;
+        border-radius: 0.3rem;
+        width: 50%;
+    }
+}
+
+.input_wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.todo_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 10rem 3rem;
+    gap: 2rem;
+}
+
+.logout_btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background-color: var(--main-blue);
+    height: 2rem;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.3rem;
+}
+
+.logout_btn::after {
+    content: url(../assets/logout.svg);
+    margin-top: 0.2rem
+}
+
+.todo_page__title {
+    font-size: 3rem;
+    margin-top: 3rem;
+}

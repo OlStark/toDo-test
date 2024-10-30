@@ -1,0 +1,64 @@
+.todo_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 0rem 0.8rem;
+}
+
+.todo__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.custom_checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.custom_checkbox input {
+    display: none;
+}
+  
+.checkbox_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: #E0E0E0;
+}
+  
+.checkbox_icon::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: cover;
+}
+  
+.custom_checkbox input:checked + .checkbox_icon::before {
+    background-image: url(../assets/done.svg);
+    background-size: cover;
+}
+
+.trash_btn::before {
+    content: url(../assets/trash.svg);
+}
+
+.return_task_btn::before {
+    content: url(../assets/back.svg);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.permanently_delete_todo::before {
+    content: url(../assets/trash.svg);
+    filter: brightness(0) saturate(100%) invert(39%) sepia(19%) saturate(1505%) hue-rotate(310deg) brightness(91%) contrast(93%);
+}

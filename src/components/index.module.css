@@ -1,0 +1,100 @@
+.todo_page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+}
+
+.todo__actual_chapter {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.todo__inputs {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: var(--form-bg-color);
+    border-radius: 0.75rem;
+
+    button {
+        width: 8rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.todo_add {
+    background-color: var(--main-blue);
+}
+.todo_add::before {
+    content: url(../assets/add.svg);
+}
+
+.todo_delete {
+    background-color: var(--main-red);
+}
+
+.todo_delete::after {
+    content: url(../assets/clean-up.svg);
+    margin-top: 0.5rem;
+}
+
+.todo__input {
+    background-color: transparent;
+    outline: none;
+    border-bottom: 0.1rem solid rgb(100,95,102);
+}
+
+.todo__input:focus {
+    transition: all 0.5s;
+    border-bottom: 0.1rem solid rgb(14, 10, 15);
+}
+
+.todo__input::placeholder {
+    color: white;
+}
+
+.filters_and_list {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-color: var(--form-bg-color);
+    border-radius: 0.75rem;
+    gap: 3rem;
+    width: 100%;
+}
+
+.todo__filters {
+    display: flex;
+    justify-content: space-between;
+}
+.filters_btn {
+    position: relative;
+}
+
+.filters_btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--main-blue);
+    transition: width 0.3s ease-out;
+}
+
+.filters_btn:hover:after {
+	width: 100%;
+}
+
+.todo_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
